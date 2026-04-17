@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8b3103761785943b8c705e4f40cd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::disparo
+  disparar: {fileID: 2524282198483295549}
 --- !u!1 &5434731852274127708
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8260267653668549870}
   m_Layer: 0
-  m_Name: disparo
+  m_Name: disparar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
