@@ -13,6 +13,7 @@ public class enemigo : MonoBehaviour
     Vector3 posicionInicial;
     Vector3 posicionLimitIzq, posicionLimitDer;
 
+    bool dirPatrullaDer = true;
 
     void Start()
     {
@@ -26,18 +27,29 @@ public class enemigo : MonoBehaviour
     {
        if(estado == "patrulla")
        {
+
+         if(transform.position.x >= posicionLimitDer.x)
+            {
+              dirPatrullaDer = false;  
+
+            }
+            if(transform.position.x <= posicionLimitIzq.x)
+            {
+                dirPatrullaDer = true; 
+            }
+        
          //si limite derecha
-         if(transform.position >= posicionLimitDer.x)
+         if(dirPatrullaDer == true)
             {
               transform.Translate(velocidadPatrulla, 0, 0);  
 
             }
             else
             {
-                transform.Translate(velocidadPatrulla, 0, 0);  
+                transform.Translate(velocidadPatrulla*-1, 0, 0);  
             }
         
-        transform.Translate(velocidadPatrulla, 0, 0);
+    
 
        }
 
