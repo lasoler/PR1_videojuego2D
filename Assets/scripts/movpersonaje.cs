@@ -15,6 +15,8 @@ Animator controlAnimacion;
 
 bool puedoSaltar = false;
 
+public string direccionPersonaje = "quieto";
+
 GameObject respawn;
 
 
@@ -50,11 +52,17 @@ GameObject respawn;
       if(moveInput.x < 0)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
+            direccionPersonaje = "izq";
+
         } else if (moveInput.x > 0)
         {
            this.GetComponent<SpriteRenderer>().flipX = false;
+           direccionPersonaje = "der";
 
-
+        }
+        else
+        {
+            direccionPersonaje = "quieto";
         }
 
     //Animacion caminando
